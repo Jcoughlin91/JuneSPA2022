@@ -39,6 +39,7 @@ const logging = (request, response, next) => {
   console.log(`${request.method} ${request.url} ${Date.now()}`);
   next();
 };
+app.use(cors);
 app.use(express.json());
 app.use(logging);
 
